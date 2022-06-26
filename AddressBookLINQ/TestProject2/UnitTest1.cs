@@ -42,5 +42,12 @@ namespace AddressBookLINQ
             string actual = address.RetrieveBasedOnCityorState("Gwa", "MP");
             Assert.AreEqual(expected, actual);
         }
+        [Test]
+        public void GivenSortedData_Alphabetically()
+        {
+            string expected = "Sunny ";
+            string actual = address.SortBasedOnNameInDataTable("Gwalior");
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
