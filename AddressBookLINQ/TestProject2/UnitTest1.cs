@@ -19,5 +19,13 @@ namespace AddressBookLINQ
             int actual = address.AddValues();
             Assert.AreEqual(actual, expected);
         }
+
+        [Test]
+        public void GivenModifyValues_returnInteger()
+        {
+            int expected = 0;
+            int actual = address.EditDataTable("Sej", "Firstname");
+            Assert.AreEqual(actual, expected);
+        }
     }
 }
