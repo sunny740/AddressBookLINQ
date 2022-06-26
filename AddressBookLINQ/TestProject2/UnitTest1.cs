@@ -45,8 +45,15 @@ namespace AddressBookLINQ
         [Test]
         public void GivenSortedData_Alphabetically()
         {
+            string expected = "1 ";
+            string actual = address.SortBasedOnNameInDataTable();
+            Assert.AreEqual(expected, actual);
+        }
+        [Test]
+        public void GivenIdentifyEachData()
+        {
             string expected = "Sunny ";
-            string actual = address.SortBasedOnNameInDataTable("Gwalior");
+            string actual = address.SortBasedOnNameInDataTable("Gwa");
             Assert.AreEqual(expected, actual);
         }
     }
