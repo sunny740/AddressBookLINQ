@@ -42,5 +42,12 @@ namespace AddressBookLINQ
             string actual = address.RetrieveBasedOnCityorState("Gwa", "MP");
             Assert.AreEqual(expected, actual);
         }
+        [Test]
+        public void GivenCountTheData_BasedOnQuery()
+        {
+            string expected = "1 1 ";
+            string actual = address.RetrieveCountBasedOnCityorState();
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
