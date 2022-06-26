@@ -32,8 +32,15 @@ namespace AddressBookLINQ
         public void GivenDeleteQuery_returnInteger()
         {
             int expected = 1;
-            int actual = address.DeleteRowInDataTable("lalita");
+            int actual = address.DeleteRowInDataTable("lalit");
             Assert.AreEqual(actual, expected);
+        }
+        [Test]
+        public void GivenRetrieveTheDataByCity_State()
+        {
+            string expected = "Sunny Sejwar ";
+            string actual = address.RetrieveBasedOnCityorState("Gwa", "MP");
+            Assert.AreEqual(expected, actual);
         }
     }
 }
