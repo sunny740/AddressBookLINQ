@@ -27,5 +27,13 @@ namespace AddressBookLINQ
             int actual = address.EditDataTable("Sej", "Firstname");
             Assert.AreEqual(actual, expected);
         }
+
+        [Test]
+        public void GivenDeleteQuery_returnInteger()
+        {
+            int expected = 1;
+            int actual = address.DeleteRowInDataTable("lalita");
+            Assert.AreEqual(actual, expected);
+        }
     }
 }
